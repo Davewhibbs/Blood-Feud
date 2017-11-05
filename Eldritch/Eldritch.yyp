@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0a6e38fb-2f92-425b-b13c-b053a7814019",
+            "Value": {
+                "id": "19e26854-9786-4b30-b2b2-809443cc706c",
+                "resourcePath": "views\\0a6e38fb-2f92-425b-b13c-b053a7814019.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "12b04ed5-f4a9-4807-a47f-9757d9d1ac47",
             "Value": {
                 "id": "391b8493-f0d5-4bbf-92c7-114847ccf3a8",
@@ -260,6 +268,14 @@
                 "id": "5c37bdf6-5c3e-43be-a550-88958954a758",
                 "resourcePath": "scripts\\GetPlayerInput\\GetPlayerInput.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8fa14505-346d-41ee-8c5c-444a9b839232",
+            "Value": {
+                "id": "3efd0fa2-8fc1-481d-ab67-1770107bacd1",
+                "resourcePath": "sprites\\s_vampire\\s_vampire.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
