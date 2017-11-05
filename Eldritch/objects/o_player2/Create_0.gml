@@ -1,7 +1,7 @@
 /// @description Player variables
 
 #region Initialize Variables
-playerID = 1;
+playerID = 2;
 
 dir = 1;
 speed_ = [0, 0];
@@ -16,7 +16,6 @@ jumps_ = max_jumps_;
 sprite = s_imp;
 attack_sprite = s_imp_attack;
 jump_sprite = s_imp_jump;
-
 
 max_health_ = 50;
 health_ = max_health_;
@@ -41,18 +40,14 @@ alarm[3] = special_attack_cd;
 feed_attack_cd = room_speed / 6;
 alarm[4] = feed_attack_cd;
 
-
-invuln_length = 10;	
-invuln = false;				// When Hurt, player is invulnerable for a few seconds
+invuln = false;
+invuln_length = 10;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
-
-evolving = false;
-evolveTime = 19;
-alarm[6] = 0;
 
 
 state = states.free;
 #endregion
+
 
 
 #region Input Config
