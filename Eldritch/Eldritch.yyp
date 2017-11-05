@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "05c628ab-96b2-4244-a5b9-f34e365492e4",
+            "Value": {
+                "id": "7ed33483-deff-46a3-b732-dcb9507fc3dd",
+                "resourcePath": "objects\\o_basic\\o_basic.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "083b03f5-e6e9-4af6-bf89-4aee84dbc848",
             "Value": {
                 "id": "00bc66b2-dd1f-4309-bb01-2a51a55e968d",

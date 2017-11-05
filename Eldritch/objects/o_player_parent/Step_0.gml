@@ -136,16 +136,11 @@ else if state == states.evolve
 		if evolving == true
 		{
 			// Create Evolution Object
-			instance_create_depth(x, y, -1, o_evolution);
+			var evolver = instance_create_depth(x, y, -1, o_evolution);
+			evolver.creator = id;
 			
-			// Create new 
-			
-			
-			
-			// Increase player's animation
-			
-			// Invincibility frames?
-			evolving = false;
+			// Destroy this object
+			instance_destroy();
 		}
 		
 		if alarm[6] <= 0{state = states.free;}
