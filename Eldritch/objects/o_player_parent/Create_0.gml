@@ -1,7 +1,10 @@
 /// @description Player variables
 
 #region Initialize Variables
-playerID = 0;
+initialize = false;
+
+playerID = 1;
+evolution_rank = 1;
 
 dir = 1;
 speed_ = [0, 0];
@@ -19,12 +22,17 @@ damage = 1;
 evolution = 0;		// Current Evolve amount
 max_evolution = 10;	// Evolution points to evolve
 
+// Sprites Used
+sprite = noone;
+attack_sprite = noone;
+jump_sprite = noone;
+
 
 x_attack_offset = 10;
 y_attack_offset = 13;
 
 // Cooldowns
-normal_attack_cd = 10;	// Normal attack every second
+normal_attack_cd = 10;				// Normal attack every second
 normal_animation_cd = 8;			// X frames in attack animation
 attack_wait = 2;
 alarm[0] = normal_attack_cd;		// Alarm[0] attack cooldown
@@ -42,7 +50,7 @@ invuln_length = 20;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
 
 evolving = false;
-evolveTime = 19;
+evolveTime = room_speed / 20 * 20;
 alarm[6] = 0;
 
 state = states.free;

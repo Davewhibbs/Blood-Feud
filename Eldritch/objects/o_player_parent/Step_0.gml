@@ -1,5 +1,12 @@
 /// @description Player Control
 
+// Initialize on first step to change certain variables
+if initialize == false
+{
+	initialize = true;
+	InitPlayerVariables(evolution_rank);
+}
+
 // Get input from the player
 GetPlayerInput(playerID);
 
@@ -43,13 +50,13 @@ if state == states.free
 			if(speed_[v] < 0)
 			{
 				sprite_index = jump_sprite;
-				image_index = 1;
+				image_index = 0;
 			}
 			// index 1 while moving down
 			else if(speed_[v] > 0)
 			{
 				sprite_index = jump_sprite;
-				image_index = 2;
+				image_index = 1;
 			}
 		}
 		// If on the floor, reset jumps, use ground sprites
@@ -137,13 +144,17 @@ else if state == states.evolve
 		{
 			// Create Evolution Object
 			var evolver = instance_create_depth(x, y, -1, o_evolution);
-			evolver.creator = id;
-			
-			// Destroy this object
-			instance_destroy();
+			evolving = false;
+			sprite_index = s_nothing;
+			alarm[6] = evolveTime;
 		}
 		
-		if alarm[6] <= 0{state = states.free;}
+		if alarm[6] <= 0
+		{
+			initialize = false;
+			evolution_rank++;
+			state = states.free;
+		}
 	
 	#endregion
 }
@@ -203,6 +214,8 @@ else if state == states.feed_attack
 	#endregion
 }
 
+
+// Don't go over stat caps
 if (evolution > max_evolution)
 {
 	evolution = max_evolution;
