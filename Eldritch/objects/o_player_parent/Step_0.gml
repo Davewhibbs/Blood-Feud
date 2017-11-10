@@ -115,6 +115,8 @@ else if state == states.hurt
 		invuln = true
 		alarm[5] = invuln_length;
 		
+		sprite_index = hurt_sprite;
+		
 		// Knockback
 		Move(speed_);
 		

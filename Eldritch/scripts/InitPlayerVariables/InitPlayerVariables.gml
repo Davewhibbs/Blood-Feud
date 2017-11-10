@@ -19,12 +19,15 @@ if argument0 == 1
 		sprite = s_imp1;
 		attack_sprite = s_imp_attack1;
 		jump_sprite = s_imp_jump1;
+		hurt_sprite = s_imp_hurt;
 	}
 	else if playerID == 2
 	{
 		sprite = s_imp2;
 		attack_sprite = s_imp_attack2;
 		jump_sprite = s_imp_jump2;
+		hurt_sprite = s_imp_hurt;
+		
 	}
 	#endregion
 	
@@ -49,12 +52,14 @@ else if argument0 == 2
 		sprite = s_vampire1;
 		attack_sprite = s_imp_attack1;
 		jump_sprite = s_vampire_jump1;
+		hurt_sprite = s_imp_hurt;
 	}
 	else if playerID == 2
 	{
 		sprite = s_vampire2;
 		attack_sprite = s_imp_attack2;
 		jump_sprite = s_vampire_jump2;
+		hurt_sprite = s_imp_hurt;
 	}
 	#endregion
 	
@@ -78,12 +83,14 @@ else if argument0 == 3
 		sprite = s_imp1;
 		attack_sprite = s_imp_attack1;
 		jump_sprite = s_imp_jump1;
+		hurt_sprite = s_imp_hurt;
 	}
 	else if playerID == 2
 	{
 		sprite = s_imp2;
 		attack_sprite = s_imp_attack2;
 		jump_sprite = s_imp_jump2;
+		hurt_sprite = s_imp_hurt;
 	}
 	#endregion
 	
@@ -118,7 +125,7 @@ feed_attack_cd = room_speed / 6;
 alarm[4] = feed_attack_cd;
 
 invuln = false;
-invuln_length = 20;					// When Hurt, player is invulnerable for a few seconds
+invuln_length = 2;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
 
 evolving = false;

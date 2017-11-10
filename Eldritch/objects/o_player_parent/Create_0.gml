@@ -26,6 +26,7 @@ max_evolution = 10;	// Evolution points to evolve
 sprite = noone;
 attack_sprite = noone;
 jump_sprite = noone;
+hurt_sprite = noone;
 
 
 x_attack_offset = 10;
@@ -46,7 +47,7 @@ feed_attack_cd = room_speed / 6;
 alarm[4] = feed_attack_cd;
 
 invuln = false;
-invuln_length = 20;					// When Hurt, player is invulnerable for a few seconds
+invuln_length = 2;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
 
 evolving = false;

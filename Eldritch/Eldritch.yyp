@@ -47,14 +47,6 @@
             }
         },
         {
-            "Key": "05c628ab-96b2-4244-a5b9-f34e365492e4",
-            "Value": {
-                "id": "7ed33483-deff-46a3-b732-dcb9507fc3dd",
-                "resourcePath": "objects\\o_basic\\o_basic.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "083b03f5-e6e9-4af6-bf89-4aee84dbc848",
             "Value": {
                 "id": "00bc66b2-dd1f-4309-bb01-2a51a55e968d",
@@ -143,6 +135,14 @@
             }
         },
         {
+            "Key": "2cec8e5c-6b5a-4679-b06e-58c532a92710",
+            "Value": {
+                "id": "a02b3dd8-63b9-45f4-b701-8a22e429ba2a",
+                "resourcePath": "sprites\\s_imp_hurt\\s_imp_hurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2d6d42b6-7cba-4e85-95e9-ff5589cee39c",
             "Value": {
                 "id": "b8095fa9-56fd-4ca3-9f32-09653c8aab4c",
@@ -156,6 +156,14 @@
                 "id": "d45a655e-d9c8-41b4-ab83-39201e7f469b",
                 "resourcePath": "objects\\o_human\\o_human.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3b62903c-c62e-4c1d-bb13-0f634a1048ff",
+            "Value": {
+                "id": "de6f14aa-2391-4d85-8eed-fe25291ed3c2",
+                "resourcePath": "scripts\\IntervalIsOff\\IntervalIsOff.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -204,6 +212,14 @@
                 "id": "a4bf6eb3-aac5-4b75-b7b0-477fdc440151",
                 "resourcePath": "objects\\o_solid\\o_solid.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "617c8bcf-7a39-4c97-a57f-b3e68f22c9ac",
+            "Value": {
+                "id": "ad9f57f4-7b27-4b19-9d7e-7f3963b033d9",
+                "resourcePath": "sprites\\s_vamplord\\s_vamplord.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -391,6 +407,14 @@
             }
         },
         {
+            "Key": "a71fcd57-92ec-41a4-9cea-d788d8845039",
+            "Value": {
+                "id": "1f83278d-f469-4a7e-9453-bb6a679f31a2",
+                "resourcePath": "sprites\\s_vampire_attack1\\s_vampire_attack1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "5b9ff80f-831c-4eb0-89b4-a1ee32d57e91",
@@ -535,14 +559,6 @@
             }
         },
         {
-            "Key": "e0ca7b40-27d1-4a62-95e2-361cae1a3ae2",
-            "Value": {
-                "id": "c402328c-38db-4a54-90dd-2f08d7d8249e",
-                "resourcePath": "objects\\o_vamp\\o_vamp.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "e145f374-fef6-452e-85ec-a23b1a26912c",
             "Value": {
                 "id": "689b94a7-08e0-4ef2-a82b-cd48feffc68a",
@@ -572,6 +588,14 @@
                 "id": "47a7e2d6-5528-46a9-8341-88557209aa5e",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "e691fde2-2e1b-429a-9515-60aa81c51d8f",
+            "Value": {
+                "id": "9a094b60-cc4d-4bff-93d9-4eca2530c3c4",
+                "resourcePath": "views\\e691fde2-2e1b-429a-9515-60aa81c51d8f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -622,7 +646,8 @@
         "7793920b-03b4-454d-bd32-30289b518d41",
         "682aa877-20a9-4175-8a92-7f3358fda27f",
         "8aec34d2-65c2-4cce-84e9-a418d334eec2",
-        "1ad7b199-000a-4c0e-91bc-efe1636f51b8"
+        "1ad7b199-000a-4c0e-91bc-efe1636f51b8",
+        "3b62903c-c62e-4c1d-bb13-0f634a1048ff"
     ],
     "tutorial": ""
 }
