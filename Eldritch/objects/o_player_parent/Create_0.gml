@@ -33,7 +33,7 @@ x_attack_offset = 10;
 y_attack_offset = 13;
 
 // Cooldowns
-normal_attack_cd = 10;				// Normal attack every second
+normal_attack_cd = 20;				// Normal attack every second
 normal_animation_cd = 8;			// X frames in attack animation
 attack_wait = 2;
 alarm[0] = normal_attack_cd;		// Alarm[0] attack cooldown
@@ -47,7 +47,7 @@ feed_attack_cd = room_speed / 6;
 alarm[4] = feed_attack_cd;
 
 invuln = false;
-invuln_length = 2;					// When Hurt, player is invulnerable for a few seconds
+invuln_length = 3;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
 
 evolving = false;

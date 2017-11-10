@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "25e57d9b-3a31-4ab0-bcbe-7e920d22ee18",
+            "Value": {
+                "id": "c20e9079-dbda-4e43-ad99-f932b9a3f46e",
+                "resourcePath": "objects\\o_blood_splat\\o_blood_splat.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "297e80c4-1072-4932-abb2-fae1a2e41532",
             "Value": {
                 "id": "4e1025e1-7183-4b09-821c-db6743eb00fa",
@@ -139,6 +147,14 @@
             "Value": {
                 "id": "a02b3dd8-63b9-45f4-b701-8a22e429ba2a",
                 "resourcePath": "sprites\\s_imp_hurt\\s_imp_hurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2d2d5bf5-2ac5-4cde-97d2-755b0f0b5fc2",
+            "Value": {
+                "id": "d2421d21-f796-4a20-a168-d4dd5bd4cbb6",
+                "resourcePath": "sprites\\s_bloodspurt\\s_bloodspurt.yy",
                 "resourceType": "GMSprite"
             }
         },

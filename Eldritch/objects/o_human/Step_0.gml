@@ -27,6 +27,9 @@
 #region	Dying
 	if state == humanStates.death
 	{
+		audio_play_sound(snd_human_death, 10, false);
+		var blood = instance_create_layer(x,y,"Instances",o_blood_splat);
+		blood.image_xscale = -killer.dir;
 		instance_destroy();
 	}
 #endregion

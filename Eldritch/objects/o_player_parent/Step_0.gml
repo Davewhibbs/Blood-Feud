@@ -96,12 +96,17 @@ if state == states.free
 		// SWITCH TO OTHER STATES
 		if normal_key
 		{
-			state = states.normal_attack;
+			// Check Attack Timer
+			if alarm[0] <= 0{
+				state = states.normal_attack;
+			}
 		}
 		if feed_key
 		{
-			evolving = true;
-			state = states.evolve;
+			if evolution >= max_evolution{
+				evolving = true;
+				state = states.evolve;
+			}
 		}
 		
 		
@@ -163,7 +168,7 @@ else if state == states.evolve
 else if state == states.normal_attack
 {
 	#region Normal Attack
-		// Check Attack Timer
+		
 		if alarm[0] <= 0{
 			// Play Normal Attack animation
 			sprite_index = attack_sprite;

@@ -8,7 +8,7 @@
 if argument0 == 1
 {
 	max_speed_ = 10;
-	max_health_ = 50;
+	max_health_ = 10;
 	jump_height_ = -20;
 	damage = 1;
 	max_evolution = 10;	// Evolution points to evolve
@@ -40,9 +40,9 @@ if argument0 == 1
 #region Vamp variables
 else if argument0 == 2
 {
-	max_speed_ = 10;
-	max_health_ = 60;
-	jump_height_ = -21;
+	max_speed_ = 12;
+	max_health_ = 15;
+	jump_height_ = -30;
 	damage = 2;
 	max_evolution = 20;	// Evolution points to evolve
 	
@@ -111,7 +111,7 @@ evolution = 0;		// Current Evolve amount
 
 
 // Cooldowns
-normal_attack_cd = 10;				// Normal attack every second
+normal_attack_cd = 20;				// Normal attack every second
 normal_animation_cd = 8;			// X frames in attack animation
 attack_wait = 2;
 alarm[0] = normal_attack_cd;		// Alarm[0] attack cooldown
@@ -125,7 +125,7 @@ feed_attack_cd = room_speed / 6;
 alarm[4] = feed_attack_cd;
 
 invuln = false;
-invuln_length = 2;					// When Hurt, player is invulnerable for a few seconds
+invuln_length = 3;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
 
 evolving = false;
