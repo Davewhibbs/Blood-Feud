@@ -18,29 +18,7 @@ if state == states.free
 		// Remove invulnerability
 		if alarm[5] <= 0 {invuln = false};
 	
-		// hinput = 1-0 or 0-1 or 0
-		var hinput = xaxis;
-		if hinput == 1 // Moving Right
-		{
-			speed_[h] = Approach(speed_[h], max_speed_, acceleration_);
-		}
-		else if hinput == -1 // Moving Left
-		{
-			speed_[h] = Approach(speed_[h], -max_speed_, acceleration_);
-		}
-		else // Stopping
-		{
-			speed_[h] = 0;
-		}
-		
-		// Apply change to dir
-		if(speed_[h] != 0)
-		{
-			dir = sign(speed_[h]);	// dir is positive or negative 1
-		}
-		
-		// Switch sprite direction based on the dir
-		image_xscale = dir;
+		var hinput = GetInput(max_speed_);
 		
 		// Check if we are NOT on the floor
 		if !place_meeting(x, y+1, o_solid)
@@ -93,7 +71,7 @@ if state == states.free
 		
 		// Move the player based on the current x and y speed for this frame
 		Move(speed_);
-		
+	
 		
 		// SWITCH TO OTHER STATES
 		if health_ <= 0
@@ -116,7 +94,8 @@ if state == states.free
 				state = states.evolve;
 			}
 		}
-	
+		
+		
 		
 		
 	#endregion
@@ -173,8 +152,23 @@ else if state == states.evolve
 else if state == states.normal_attack
 {
 	#region Normal Attack
+		var hinput = GetInput(max_speed_);
+		
+		#region Falling
+		// Check if we are NOT on the floor
+		if !place_meeting(x, y+1, o_solid)
+		{
+			speed_[v] += gravity_;
+		}
+		// If on the floor, reset jumps, use ground sprites
+		else 
+		{
+			jumps_ = max_jumps_;
+		}
+		#endregion
 		
 		if alarm[0] <= 0{
+			
 			// Play Normal Attack animation
 			sprite_index = attack_sprite;
 			alarm[1] = normal_animation_cd;
@@ -186,9 +180,8 @@ else if state == states.normal_attack
 			alarm[2] = attack_wait;
 		}
 		
-		if alarm[2] <= 0{
+		if alarm[2] <= 0 && attacking == false{
 			// Create Normal Attack object based on evolution rank
-			
 			if evolution_rank == 1{
 				var attack = instance_create_layer(x+x_attack_offset*dir, y - y_attack_offset, "Instances", o_damage);
 			}
@@ -199,6 +192,12 @@ else if state == states.normal_attack
 			attack.damage = damage;
 			attack.creator = id;
 			alarm[2] = 100;
+			attacking = true;
+		}
+		
+		if attacking == false
+		{
+			Move(speed_);
 		}
 		
 		// STATE CHANGES
@@ -206,8 +205,11 @@ else if state == states.normal_attack
 		if (alarm[1] <= 0)
 		{
 			speed_ = [0,0];
+			attacking = false;
 			state = states.free;
 		}
+		
+		
 	#endregion
 }
 else if state == states.special_attack

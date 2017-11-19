@@ -8,6 +8,7 @@
 if argument0 == 1
 {
 	max_speed_ = 10;
+	max_speed_attack = 5;
 	max_health_ = 10;
 	jump_height_ = -20;
 	damage = 1;
@@ -16,6 +17,8 @@ if argument0 == 1
 	normal_attack_cd = 20;				// Normal attack every second
 	normal_animation_cd = room_speed/15 * 7;			// X frames in attack animation
 	attack_wait = 2;
+	
+	death_object = o_imp_death;
 	
 	#region Sprites Used (determined by player ID)
 	if playerID == 1
@@ -45,6 +48,7 @@ if argument0 == 1
 else if argument0 >= 2
 {
 	max_speed_ = 12;
+	max_speed_attack = 8;
 	max_health_ = 10;
 	jump_height_ = -30;
 	damage = 3;
@@ -53,6 +57,8 @@ else if argument0 >= 2
 	normal_attack_cd = (room_speed/20 * 14) + 7;				// Normal attack every second
 	normal_animation_cd = room_speed/20 * 14;			// X frames in attack animation
 	attack_wait = 7;
+	
+	death_object = o_vampire_death;
 	
 	#region Sprites Used (determined by player ID)
 	if playerID == 1
@@ -111,6 +117,7 @@ else if argument0 >= 2
 //}
 #endregion
 
+evolution = 10;		// Current Evolve amount
 
 dir = 1;
 speed_ = [0, 0];
@@ -119,7 +126,7 @@ friction_ = .3;
 max_jumps_ = 1;
 jumps_ = max_jumps_;
 health_ = max_health_;
-evolution = 0;		// Current Evolve amount
+attacking = false;
 
 
 // Cooldowns

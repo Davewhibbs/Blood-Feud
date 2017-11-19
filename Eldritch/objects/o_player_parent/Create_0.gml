@@ -9,18 +9,21 @@ evolution_rank = 1;
 dir = 1;
 speed_ = [0, 0];
 max_speed_ = 10;
+max_speed_attack = 5;
 acceleration_ = 3;
 friction_ = .3;
 jump_height_ = -20;
 max_jumps_ = 1
 jumps_ = max_jumps_;
-
+attacking = false;
 
 max_health_ = 50;
 health_ = max_health_;
 damage = 1;
 evolution = 0;		// Current Evolve amount
 max_evolution = 10;	// Evolution points to evolve
+
+death_object = noone; // Corpse created on death
 
 // Sprites Used
 sprite = noone;

@@ -11,7 +11,12 @@ if alarm[7] <= 0
 	
 	// Switch to death sprite
 	image_index = 0;
-	//sprite_index = death_sprite;
+	
+	// Make this invisible
+	visible = false;
+	
+	// Create death object for permanence
+	instance_create_layer(x,y,"Instances", death_object);
 	
 	if playerID == 1
 	{
