@@ -2,7 +2,7 @@
 
 // Life of damage object
 damage = 0;
-lifetime = .3;
+lifetime = 1;
 knockback_x = 20;
 knockback_y = 10;
 creator = noone;

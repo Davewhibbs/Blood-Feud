@@ -1,11 +1,6 @@
 /// @description Player Control
 
-// Initialize on first step to change certain variables
-if initialize == false
-{
-	initialize = true;
-	InitPlayerVariables(evolution_rank);
-}
+
 
 // Get input from the player
 GetPlayerInput(playerID);
@@ -13,6 +8,13 @@ GetPlayerInput(playerID);
 if state == states.free
 {
 	#region Movement
+		// Initialize on first step to change certain variables
+		if initialize == false
+		{
+			initialize = true;
+			InitPlayerVariables(evolution_rank);
+		}
+			
 		// Remove invulnerability
 		if alarm[5] <= 0 {invuln = false};
 	
@@ -94,10 +96,16 @@ if state == states.free
 		
 		
 		// SWITCH TO OTHER STATES
+		if health_ <= 0
+		{
+			state = states.die;	
+		}
+		
 		if normal_key
 		{
 			// Check Attack Timer
 			if alarm[0] <= 0{
+				image_index = 0;
 				state = states.normal_attack;
 			}
 		}
@@ -108,6 +116,7 @@ if state == states.free
 				state = states.evolve;
 			}
 		}
+	
 		
 		
 	#endregion
@@ -136,11 +145,7 @@ else if state == states.die
 {
 	#region	Death
 	
-		// Play death animation
-		
-		// Reduce the player's evolution by 1
-		
-		// Respawn at spawner
+		PlayerDeath();
 	
 	#endregion
 }
@@ -182,16 +187,25 @@ else if state == states.normal_attack
 		}
 		
 		if alarm[2] <= 0{
-			// Create Normal Attack object
-			var attack = instance_create_layer(x+x_attack_offset*dir, y - y_attack_offset, "Instances", o_damage);
+			// Create Normal Attack object based on evolution rank
+			
+			if evolution_rank == 1{
+				var attack = instance_create_layer(x+x_attack_offset*dir, y - y_attack_offset, "Instances", o_damage);
+			}
+			else
+			{
+				var attack = instance_create_layer(x+x_attack_offset*dir, y - y_attack_offset, "Instances", o_damage2);
+			}
 			attack.damage = damage;
 			attack.creator = id;
+			alarm[2] = 100;
 		}
 		
 		// STATE CHANGES
 		// After the animation is done, change back to free
 		if (alarm[1] <= 0)
 		{
+			speed_ = [0,0];
 			state = states.free;
 		}
 	#endregion

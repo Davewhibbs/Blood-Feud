@@ -1,6 +1,6 @@
 ///@param playerID
 
-if(argument0 == 1)
+if(argument0 == 2)
 {
 right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
@@ -10,15 +10,15 @@ normal_key = keyboard_check(vk_control);
 special_key = keyboard_check(vk_shift);
 feed_key = keyboard_check(vk_enter);
 }
-else if(argument0 == 2)
+else if(argument0 == 1)
 {
 right_key = keyboard_check(ord("D"));
 left_key = keyboard_check(ord("A"));
 jump_key = keyboard_check(ord("W"));
 down_key = keyboard_check(ord("S"));
-normal_key = keyboard_check(ord("T"));
+normal_key = keyboard_check(ord("Q"));
 special_key = keyboard_check(ord("Y"));
-feed_key = keyboard_check(ord("U"));
+feed_key = keyboard_check(ord("E"));
 }
 
 // Get the axis
