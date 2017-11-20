@@ -11,12 +11,14 @@ if alarm[7] <= 0
 	
 	// Switch to death sprite
 	image_index = 0;
-	
-	// Make this invisible
-	visible = false;
+	sprite_index = s_nothing;
 	
 	// Create death object for permanence
-	instance_create_layer(x,y,"Instances", death_object);
+	var death = instance_create_layer(x,y,"Instances", death_object);
+	death.dir = dir;
+	
+	// Play death sound
+	audio_play_sound(death_sound, 10, false);
 	
 	if playerID == 1
 	{

@@ -9,7 +9,7 @@ if argument0 == 1
 {
 	max_speed_ = 10;
 	max_speed_attack = 5;
-	max_health_ = 10;
+	max_health_ = 5;
 	jump_height_ = -20;
 	damage = 1;
 	max_evolution = 10;	// Evolution points to evolve
@@ -19,6 +19,7 @@ if argument0 == 1
 	attack_wait = 2;
 	
 	death_object = o_imp_death;
+	death_sound = snd_death;
 	
 	#region Sprites Used (determined by player ID)
 	if playerID == 1
@@ -49,7 +50,7 @@ else if argument0 >= 2
 {
 	max_speed_ = 12;
 	max_speed_attack = 8;
-	max_health_ = 10;
+	max_health_ = 7;
 	jump_height_ = -30;
 	damage = 3;
 	max_evolution = 20;	// Evolution points to evolve
@@ -59,6 +60,7 @@ else if argument0 >= 2
 	attack_wait = 7;
 	
 	death_object = o_vampire_death;
+	death_sound = snd_death;
 	
 	#region Sprites Used (determined by player ID)
 	if playerID == 1
@@ -66,7 +68,7 @@ else if argument0 >= 2
 		sprite = s_vampire1;
 		attack_sprite = s_vampire_attack1;
 		jump_sprite = s_vampire_jump1;
-		hurt_sprite = s_imp_hurt;
+		hurt_sprite = s_vampire_hurt;
 	}
 	else if playerID == 2
 	{
@@ -117,7 +119,7 @@ else if argument0 >= 2
 //}
 #endregion
 
-evolution = 10;		// Current Evolve amount
+evolution = 0;		// Current Evolve amount
 
 dir = 1;
 speed_ = [0, 0];
@@ -141,7 +143,7 @@ feed_attack_cd = room_speed / 6;
 alarm[4] = feed_attack_cd;
 
 invuln = false;
-invuln_length = 3;					// When Hurt, player is invulnerable for a few seconds
+invuln_length = 2;					// When Hurt, player is invulnerable for a few seconds
 alarm[5] = invuln_length;
 
 evolving = false;

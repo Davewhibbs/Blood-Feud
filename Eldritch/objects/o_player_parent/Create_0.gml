@@ -24,6 +24,7 @@ evolution = 0;		// Current Evolve amount
 max_evolution = 10;	// Evolution points to evolve
 
 death_object = noone; // Corpse created on death
+death_sound = noone;
 
 // Sprites Used
 sprite = noone;

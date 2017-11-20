@@ -10,7 +10,8 @@
         "cee10600-3e66-4547-8239-7480d069c135",
         "710d6561-be97-4f82-b123-496742183b53",
         "0337a018-71f2-49b6-9456-2ecef5eab91f",
-        "2cec8e5c-6b5a-4679-b06e-58c532a92710"
+        "2cec8e5c-6b5a-4679-b06e-58c532a92710",
+        "7fb6d1fa-5233-4eb4-a324-8aec57b2f0a9"
     ],
     "filterType": "GMSprite",
     "folderName": "imp",

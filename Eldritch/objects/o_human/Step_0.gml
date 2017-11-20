@@ -28,8 +28,8 @@
 	if state == humanStates.death
 	{
 		audio_play_sound(snd_human_death, 10, false);
-		var blood = instance_create_layer(x,y,"Instances",o_blood_splat);
-		blood.image_xscale = -killer.dir;
+		var blood = instance_create_layer(x,y,"Instances",o_human_death);
+		blood.dir = dir;
 		instance_destroy();
 	}
 #endregion

@@ -87,9 +87,10 @@ if state == states.free
 				state = states.normal_attack;
 			}
 		}
-		if feed_key
-		{
-			if evolution >= max_evolution{
+		
+		if evolution >= max_evolution{
+			if feed_key
+			{
 				evolving = true;
 				state = states.evolve;
 			}
@@ -104,20 +105,24 @@ if state == states.free
 else if state == states.hurt
 {
 	#region Hurt
-		// Invincibitity Frames
-		invuln = true
-		alarm[5] = invuln_length;
-		
-		sprite_index = hurt_sprite;
-		
-		// Knockback
-		Move(speed_);
-		
-		// Flash white
+		if alarm[5] < 0 
+		{
+			// Invincibitity Frames
+			invuln = true
+			alarm[5] = invuln_length;
+			
+			
+			sprite_index = hurt_sprite;
+			
+			// Knockback
+			Move(speed_);
+		}
 		
 		// STATE CHANGES
-		state = states.free;
-	
+		else if alarm[5] == 0
+		{
+			state = states.free;
+		}
 	#endregion
 }
 else if state == states.die
@@ -133,6 +138,9 @@ else if state == states.evolve
 	#region Evolve
 		if evolving == true
 		{
+			// Play evolution sound
+			audio_play_sound(snd_evolve, 10, false);
+			
 			// Create Evolution Object
 			var evolver = instance_create_depth(x, y, -1, o_evolution);
 			evolving = false;
@@ -178,9 +186,14 @@ else if state == states.normal_attack
 			
 			// Reset object creation timer
 			alarm[2] = attack_wait;
+			
+			
 		}
 		
 		if alarm[2] <= 0 && attacking == false{
+			// Play attack whoosh sound once
+			audio_play_sound(snd_whoosh, 10, false);
+			
 			// Create Normal Attack object based on evolution rank
 			if evolution_rank == 1{
 				var attack = instance_create_layer(x+x_attack_offset*dir, y - y_attack_offset, "Instances", o_damage);

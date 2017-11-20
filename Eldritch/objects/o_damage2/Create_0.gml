@@ -7,3 +7,7 @@ x_offset = 5;
 y_offset = -10;
 creator = noone;
 alarm[0] = lifetime;
+
+sleep_human = 1;
+sleep_player = 2;
+alarm[1] = 0;

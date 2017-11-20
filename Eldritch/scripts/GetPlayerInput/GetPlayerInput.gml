@@ -16,7 +16,7 @@ right_key = keyboard_check(ord("D"));
 left_key = keyboard_check(ord("A"));
 jump_key = keyboard_check(ord("W"));
 down_key = keyboard_check(ord("S"));
-normal_key = keyboard_check(ord("Q"));
+normal_key = keyboard_check(vk_space);
 special_key = keyboard_check(ord("Y"));
 feed_key = keyboard_check(ord("E"));
 }

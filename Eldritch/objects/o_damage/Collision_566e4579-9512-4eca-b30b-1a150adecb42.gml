@@ -10,7 +10,8 @@ if(other != creator)
 		audio_play_sound(snd_bite, 10,false);
 		var hit = instance_create_depth(x + x_offset, y + y_offset, -1, o_bighit);
 		hit.dir = creator.dir;
+		
+		other.dir = -creator.dir;
 		other.state = states.hurt;
-		instance_destroy();
 	}
 }
